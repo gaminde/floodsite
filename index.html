@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgotten Floods: Southern West Virginia’s Unseen Crisis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #e5e5e5;
+      font-family: 'Arial', sans-serif;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: #4a4a4a;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin: 2rem 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff4d4d;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .statement {
+      background: #2a2a2a;
+      border-left: 4px solid #3b82f6;
+    }
+    .photo, .volunteer, .media {
+      background: #1a1a1a;
+      border-left: 4px solid #ef4444;
+    }
+    .photo-img {
+      filter: grayscale(20%);
+      transition: filter 0.3s;
+    }
+    .photo-img:hover {
+      filter: grayscale(0%);
+    }
+    .grainy {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABOUExURf///8zMzP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN3piPsAAAA9SURBVEhL7c0xCsBQAATQI7j/Md0JDtWdt+3//w0MKBQKC4XCYqFQWCgUFgqFwkKhsFAoLBSK9H8BAAD//wXv4QxiS5QAAAAASUVORK5CYII=');
+      background-size: 100px 100px;
+    }
+    .card {
+      cursor: pointer;
+      transition: max-height 0.3s ease;
+      overflow: hidden;
+    }
+    .card-content {
+      display: none;
+    }
+    .card.active .card-content {
+      display: block;
+    }
+    .media-card:hover {
+      background: #2a2a2a;
+      transform: scale(1.02);
+      transition: all 0.3s;
+    }
+  </style>
+</head>
+<body class="grainy">
+  <header class="sticky top-0 bg-black/80 backdrop-blur-sm p-4 shadow-md">
+    <nav class="flex justify-between items-center max-w-6xl mx-auto">
+      <h1 class="text-2xl font-bold text-red-500">Forgotten Floods</h1>
+      <ul class="flex space-x-4">
+        <li><a href="#intro" class="text-gray-300 hover:text-red-500">Intro</a></li>
+        <li><a href="#stories" class="text-gray-300 hover:text-red-500">Stories</a></li>
+        <li><a href="#media" class="text-gray-300 hover:text-red-500">Media</a></li>
+        <li><a href="#timeline" class="text-gray-300 hover:text-red-500">Timeline</a></li>
+        <li><a href="#contact" class="text-gray-300 hover:text-red-500">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto py-8 px-4">
+    <section id="intro" class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-red-500 mb-4">Southern West Virginia’s Unseen Crisis</h2>
+      <p class="text-lg text-gray-300 mb-4">On Valentine’s Day 2025, Southern West Virginia drowned. Torrential rains, dumping five inches in hours, swelled the Tug Fork River to 48.35 feet in Williamson, its second-highest crest ever. Homes crumbled, roads vanished, and three lives—including a toddler—were lost in McDowell County. Snow followed, trapping survivors in icy ruins. Nearly three months later, the coalfields remain a wasteland of mold, debris, and despair. Photographer Sydnei Tatum’s images, now catching national eyes, reveal the truth: families like Ashley Rutherford’s live in rotting homes, while volunteers like WVU students fill gaps left by absent aid. Governor Patrick Morrisey calls it progress; residents call it abandonment.</p>
+      <p class="text-lg text-gray-300">West Virginia, a red state that gave Trump 70% of its vote, heard his promise: disasters like Hurricane Helene wouldn’t happen “on my watch.” This is his watch, yet FEMA aid trickles to only four counties, and the state’s flood trust fund sits empty. As CBS News’ Scott MacFarlane joins Sydnei to witness the devastation, the nation begins to see what Charleston ignores. This is a story of broken promises, resilient spirits, and a community fighting to be heard.</p>
+    </section>
+
+    <section id="stories" class="mb-12">
+      <h3 class="text-3xl font-bold text-center mb-8 text-red-500">Stories of Resilience and Neglect</h3>
+      <div class="space-y-4">
+        <!-- Victim Story: Ashley Rutherford -->
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-semibold text-red-400 cursor-pointer">Ashley Rutherford: A Mother’s Fight in a Ruined Home</h4>
+          <div class="card-content mt-4">
+            <img src="https://via.placeholder.com/600x400?text=Ashley+Rutherford" alt="Ashley’s flooded home" class="photo-img w-full rounded-lg mb-4">
+            <p>Ashley Rutherford, 33, gripped her wheelchair as floodwaters surged into her Berwind home on February 15. Her four children, aged 6 to 14, tried to lift her to safety, but the muddy tide was relentless. Now, her kitchen floor sags, her walls bloom with mold, and her family lives out of plastic bins. “I wake up crying,” she tells Sydnei Tatum, whose photo captures Ashley’s stove, caked in dried mud. FEMA denied her claim, citing “insufficient damage,” and no state aid has arrived. Ashley’s fight is not just for her home but for her children’s future in a county where floods are a way of life.</p>
+          </div>
+        </div>
+
+        <!-- Volunteer Story: WVU Students -->
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-semibold text-red-400 cursor-pointer">WVU Students: Heroes from Morgantown</h4>
+          <div class="card-content mt-4">
+            <img src="https://via.placeholder.com/600x400?text=WVU+Volunteers" alt="WVU students volunteering" class="photo-img w-full rounded-lg mb-4">
+            <p>In Morgantown, 250 miles from McDowell’s mud-soaked streets, WVU students saw Sydnei Tatum’s photos and acted. Packing trucks with blankets, food, and shovels, they drove four hours through snow to help. “We couldn’t just watch,” says Sarah, a 20-year-old nursing major. For weeks, they cleared debris, their boots sinking in sludge, their hands raw. Sydnei’s photo of Sarah hauling a ruined couch speaks to their grit. “The state’s nowhere,” Sarah says, “but we’ll keep coming.” Their story is West Virginia’s heart, beating when leaders fail.</p>
+          </div>
+        </div>
+
+        <!-- Victim Story: Eula Prater -->
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-semibold text-red-400 cursor-pointer">Eula Prater: A Widow’s Last Stand</h4>
+          <div class="card-content mt-4">
+            <img src="https://via.placeholder.com/600x400?text=Eula+Prater" alt="Eula’s destroyed home" class="photo-img w-full rounded-lg mb-4">
+            <p>Eula Prater, 82, fled her Williamson home as water breached her door. “I grabbed my Bible and ran,” she says, her voice trembling. Her house, where she raised three children, is now a shell—photos and furniture gone. Living with a neighbor, Eula fears her town’s end as families leave. Sydnei Tatum’s photo of Eula’s porch, collapsed under debris, captures her loss. No state aid has come, and FEMA’s phone line offers only silence. “We’re a family here,” Eula says, “but we’re fading.” Her story is a plea for remembrance.</p>
+          </div>
+        </div>
+
+        <!-- Volunteer Story: Latin Appalachian -->
+        <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-semibold text-red-400 cursor-pointer">Latin Appalachian: Feeding Welch’s Soul</h4>
+          <div class="card-content mt-4">
+            <img src="https://via.placeholder.com/600x400?text=Latin+Appalachian" alt="Latin Appalachian food hub" class="photo-img w-full rounded-lg mb-4">
+            <p>Roberto Diaz, owner of Latin Appalachian in Welch, turned his restaurant into a lifeline. With his daughter Abagail, a high school senior, he’s cooked thousands of free meals—arroz con pollo, warm and hearty—for flood victims. “This is home,” Roberto says, stirring a steaming pot. Sydnei Tatum’s photo of Abagail serving a plate to a weary resident glows with hope. No state aid supports their work, yet they persist. “We feed more than bodies,” Abagail says. Their story shows community thriving where government falters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="mb-12">
+      <h3 class="text-3xl font-bold text-center mb-8 text-red-500">Media Spotlight</h3>
+      <div class="space-y-4">
+        <!-- CBS News: Scott MacFarlane -->
+        <div class="card media-card bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-semibold text-red-400 cursor-pointer">CBS News: Scott MacFarlane Tours with Sydnei Tatum</h4>
+          <div class="card-content mt-4">
+            <img src="https://via.placeholder.com/600x400?text=CBS+News+Visit" alt="Scott MacFarlane with Sydnei" class="photo-img w-full rounded-lg mb-4">
+            <p>On May 6, 2025, CBS News correspondent Scott MacFarlane met photographer Sydnei Tatum in McDowell County to witness the flood’s lingering devastation. Walking through Berwind’s muddy streets, MacFarlane saw homes like Ashley Rutherford’s, still uninhabitable, and debris piles untouched since February. Sydnei’s photos guided his tour, putting faces to the crisis. “Her work is waking people up,” MacFarlane said. This national attention underscores the state’s neglect, as West Virginia’s plight finally reaches a broader audience.</p>
+          </div>
+        </div>
+
+        <!-- MetroNews Television -->
+        <div class="card media-card bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-semibold text-red-400 cursor-pointer">MetroNews Television: Sydnei Tatum’s Call to Action</h4>
+          <div class="card-content mt-4">
+            <img src="https://via.placeholder.com/600x400?text=MetroNews+Interview" alt="Sydnei on MetroNews" class="photo-img w-full rounded-lg mb-4">
+            <p>On May 3, 2025, Sydnei Tatum appeared on MetroNews Television, sharing her powerful images of McDowell County’s flood damage. “These are my neighbors,” she said, urging viewers to see the human toll. Her interview, praised on X for its impact, highlighted stories like Eula Prater’s, drawing local and regional support. Sydnei’s work is shifting the narrative, proving the crisis is far from over.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="relative">
+      <h3 class="text-3xl font-bold text-center mb-8 text-red-500">Timeline of Neglect</h3>
+      <div class="timeline">
+        <!-- Flood Onset -->
+        <div class="timeline-item flex justify-end">
+          <div class="statement w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">February 15, 2025, 11:48 PM EST</p>
+            <h4 class="text-xl font-semibold text-blue-400">The Flood Strikes</h4>
+            <p>“Governor Morrisey has declared a State of Emergency amid heavy rains and flooding in 10 counties.” Five inches of rain push the Tug Fork River to 48.35 feet in Williamson, rivaling the 1977 disaster. Three die in McDowell, including a child.</p>[](https://westvirginiawatch.com/2025/02/27/federal-funds-to-come-for-residents-affected-by-flooding-in-four-wv-counties/)
+            <p class="text-sm text-gray-500 mt-2">Source: WSAZ News</p>
+          </div>
+        </div>
+
+        <!-- Victim Story: Berwind -->
+        <div class="timeline-item flex justify-start">
+          <div class="photo w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">February 16, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">Berwind: Linda Woods’ Ruin</h4>
+            <img src="https://via.placeholder.com/600x400?text=Flooded+Home" alt="Linda’s home" class="photo-img w-full rounded-lg mb-4">
+            <p>Linda Woods, 61, lost everything—stove, clothes, memories—when the Tug Fork flooded her Berwind home. “Mold’s under my bed,” she tells Sydnei Tatum, whose photo shows Linda’s kitchen, a muddy wreck. No state aid has come, and FEMA’s forms are a maze. Linda’s resilience battles despair.</p>
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+
+        <!-- Volunteer Story: National Guard -->
+        <div class="timeline-item flex justify-end">
+          <div class="volunteer w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">February 17, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">National Guard: A Fleeting Effort</h4>
+            <img src="https://via.placeholder.com/600x400?text=National+Guard" alt="National Guard in Welch" class="photo-img w-full rounded-lg mb-4">
+            <p>Over 150 National Guard members clear 900 tons of debris in Welch. “We’re here for you,” says Sgt. Mason Foster. Sydnei Tatum’s photo of soldiers hauling wreckage offers hope, but their departure leaves streets clogged again, with no state follow-up.</p>[](http://www.wvva.com/2025/03/14/winter-floods-two-virginias-one-month-out/)
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+
+        <!-- Statement: FEMA Request -->
+        <div class="timeline-item flex justify-start">
+          <div class="statement w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">February 17, 2025, 6:14 PM EST</p>
+            <h4 class="text-xl font-semibold text-blue-400">Morrisey Seeks Federal Aid</h4>
+            <p>“I’ve asked President Trump for a Major Disaster Declaration to unlock federal resources.” Morrisey sidesteps Trump’s FEMA cuts, leaving West Virginia reliant on strained state funds.</p>[](https://westvirginiawatch.com/2025/02/27/federal-funds-to-come-for-residents-affected-by-flooding-in-four-wv-counties/)
+            <p class="text-sm text-gray-500 mt-2">Source: WSAZ News</p>
+          </div>
+        </div>
+
+        <!-- Victim Story: Welch -->
+        <div class="timeline-item flex justify-end">
+          <div class="photo w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">February 18, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">Welch: The Griffins’ Tragedy</h4>
+            <img src="https://via.placeholder.com/600x400?text=Debris+in+Welch" alt="Debris in Welch" class="photo-img w-full rounded-lg mb-4">
+            <p>Debbie, Donald, and their two-year-old granddaughter died when their truck was swept away in Welch. Sydnei Tatum’s photo of debris-choked streets honors their memory, as cleanup stalls without state support.</p>[](https://mountainstatespotlight.org/2025/04/24/morrisey-slow-flood-recovery-southern-wv/)
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+
+        <!-- Political Context: Trump’s Promises -->
+        <div class="timeline-item flex justify-start">
+          <div class="statement w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">February 19, 2025</p>
+            <h4 class="text-xl font-semibold text-blue-400">Trump’s Empty Vow</h4>
+            <p>Trump, after Hurricane Helene, said, “Disasters won’t happen on my watch.” West Virginia, with 70% Trump voters, sees only $25 million in FEMA aid for four counties, while others languish.</p>[](https://mountainstatespotlight.org/2025/04/24/morrisey-slow-flood-recovery-southern-wv/)
+            <p class="text-sm text-gray-500 mt-2">Source: Mountain State Spotlight</p>
+          </div>
+        </div>
+
+        <!-- Volunteer Story: WVU Students -->
+        <div class="timeline-item flex justify-end">
+          <div class="volunteer w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">February 20, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">WVU Students: Relentless Aid</h4>
+            <img src="https://via.placeholder.com/600x400?text=WVU+Students" alt="WVU students" class="photo-img w-full rounded-lg mb-4">
+            <p>WVU students, inspired by Sydnei’s photos, deliver supplies to McDowell. “We drove all night,” says Jake, 22. Sydnei Tatum’s image of them unloading water bottles shines against the state’s absence. Their work continues, unpaid and unsung.</p>[](http://www.wvva.com/2025/03/14/winter-floods-two-virginias-one-month-out/)
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+
+        <!-- Statement: FEMA Approval -->
+        <div class="timeline-item flex justify-start">
+          <div class="statement w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">February 26, 2025</p>
+            <h4 class="text-xl font-semibold text-blue-400">FEMA’s Limited Reach</h4>
+            <p>“Trump approves a Major Disaster Declaration for McDowell, Mercer, Mingo, and Wyoming counties.” Only 3,500 of 12,000 applicants get aid, leaving counties like Logan empty-handed.</p>[](https://www.wvnews.com/news/wvnews/flood-recovery-assistance-available-for-13-west-virginia-counties-impacted-by-february-2025-flooding/article_dfdfad88-f49c-11ef-836e-4f8005b35e45.html)
+            <p class="text-sm text-gray-500 mt-2">Source: WV News</p>
+          </div>
+        </div>
+
+        <!-- Victim Story: McDowell -->
+        <div class="timeline-item flex justify-end">
+          <div class="photo w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">March 15, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">McDowell: Dale Blevins’ Toxic Home</h4>
+            <img src="https://via.placeholder.com/600x400?text=Moldy+Basement" alt="Mold in McDowell" class="photo-img w-full rounded-lg mb-4">
+            <p>Dale Blevins, 70, coughs in her McDowell home, where mold coats her basement. “I can’t breathe right,” she tells Sydnei Tatum. Her photo of white mold crystals screams neglect, as state and FEMA aid bypass her.</p>[](https://mountainstatespotlight.org/2025/04/24/morrisey-slow-flood-recovery-southern-wv/)
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+
+        <!-- Volunteer Story: Latin Appalachian -->
+        <div class="timeline-item flex justify-start">
+          <div class="volunteer w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">April 1, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">Latin Appalachian: Sustaining Welch</h4>
+            <img src="https://via.placeholder.com/600x400?text=Food+Hub" alt="Latin Appalachian" class="photo-img w-full rounded-lg mb-4">
+            <p>Roberto Diaz’s Latin Appalachian restaurant feeds Welch’s hungry. “We’re family,” he says. Sydnei Tatum’s photo of Abagail Diaz serving meals radiates warmth, filling the void of state aid.</p>[](http://www.wvva.com/2025/03/14/winter-floods-two-virginias-one-month-out/)
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+
+        <!-- Statement: Morrisey’s Optimism -->
+        <div class="timeline-item flex justify-end">
+          <div class="statement w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">April 24, 2025</p>
+            <h4 class="text-xl font-semibold text-blue-400">Morrisey’s False Hope</h4>
+            <p>“[Morrisey] was ‘grateful to the Trump administration’ for ‘strong support.’” Residents see debris piles and rotting homes, not support, as the state’s flood fund remains unfunded.</p>[](https://mountainstatespotlight.org/2025/04/24/morrisey-slow-flood-recovery-southern-wv/)
+            <p class="text-sm text-gray-500 mt-2">Source: Mountain State Spotlight</p>
+          </div>
+        </div>
+
+        <!-- Media Story: MetroNews -->
+        <div class="timeline-item flex justify-start">
+          <div class="media w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">May 3, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">MetroNews: Sydnei’s Voice</h4>
+            <img src="https://via.placeholder.com/600x400?text=MetroNews" alt="Sydnei on MetroNews" class="photo-img w-full rounded-lg mb-4">
+            <p>Sydnei Tatum’s MetroNews interview showcases McDowell’s plight. “These are people, not statistics,” she says. Her photos spark local action, but state leaders remain silent.</p>
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+
+        <!-- Media Story: CBS News -->
+        <div class="timeline-item flex justify-end">
+          <div class="media w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">May 6, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">CBS News: MacFarlane’s Visit</h4>
+            <img src="https://via.placeholder.com/600x400?text=CBS+Visit" alt="MacFarlane with Sydnei" class="photo-img w-full rounded-lg mb-4">
+            <p>CBS News’ Scott MacFarlane tours McDowell with Sydnei Tatum, seeing homes still flooded and roads blocked. Her photos guide his report, amplifying the crisis nationally. “This is unacceptable,” he notes, echoing residents’ frustration.</p>
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+
+        <!-- Victim Story: Berwind -->
+        <div class="timeline-item flex justify-start">
+          <div class="photo w-5/12 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-gray-400">May 8, 2025</p>
+            <h4 class="text-xl font-semibold text-red-400">Berwind: Carol Lester’s Defiance</h4>
+            <img src="https://via.placeholder.com/600x400?text=Ruined+Home" alt="Carol’s home" class="photo-img w-full rounded-lg mb-4">
+            <p>Carol Lester, 65, and her husband D. refuse to leave their crumbling Berwind home. “We built this life,” Carol tells Sydnei Tatum. Her photo of their cracked foundation, surrounded by trash, defies Morrisey’s “progress.” No aid has arrived, but Carol stands firm.</p>[](https://mountainstatespotlight.org/2025/04/24/morrisey-slow-flood-recovery-southern-wv/)
+            <p class="text-sm text-gray-500 mt-2">Photo by Sydnei Tatum</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="my-12">
+      <h3 class="text-3xl font-bold text-center mb-8 text-red-500">Get Involved</h3>
+      <p class="text-lg text-gray-300 text-center">Share your story or volunteer. Email us at <a href="mailto:info@forgottenfloods.org" class="text-red-500 hover:underline">info@forgottenfloods.org</a>. For FEMA aid, visit <a href="https://www.disasterassistance.gov" class="text-red-500 hover:underline">disasterassistance.gov</a> or call 1-800-621-3362.</p>
+    </section>
+  </main>
+
+  <footer class="bg-black/80 py-4 text-center">
+    <p class="text-gray-400">© 2025 Forgotten Floods. Photos by Sydnei Tatum. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Toggle cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('active');
+      });
+    });
+
+    // Fade-in timeline items
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    timelineItems.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
+
